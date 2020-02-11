@@ -7,37 +7,13 @@ var path = require('path');
 server.use('/Appify', express.static('assets'))
 server.use('/Appify', express.static('assets/views'))
 
-server.get('/pie',function(req,res){
+server.get('/YOUR_URL',function(req,res){
 
-   getData.PaidandFreeCount(function (data){
+   getData.YOUR_FUNCTION_NAME(function (data){
       res.header("Access-Control-Allow-Origin", "*");
-      res.send(data);
+      res.send(data); // SEND DATA TO THE FRONT END
    });
 });
-server.get('/bargraph',function(req,res){
 
-   getData.CategoryGroup(function (data){
-      res.header("Access-Control-Allow-Origin", "*");
-      res.send(data);
-   });
-});
-server.get('/tabledata',function(req,res){
-   getData.Top10Apps(function (data){
-      res.header("Access-Control-Allow-Origin", "*");
-      res.send(data);
-   });
-});
-server.get('/average',function(req,res){
-   getData.CategoryAVG(function (data){
-      res.header("Access-Control-Allow-Origin", "*");
-      res.send(data);
-   });
-});
-server.get('/price',function(req,res){
-   getData.CategoryPrice(function (data){
-      res.header("Access-Control-Allow-Origin", "*");
-      res.send(data);
-   });
-});
 server.listen(6789);
 console.log("Running at Port 6789");
