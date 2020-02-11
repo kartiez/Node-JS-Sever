@@ -17,7 +17,7 @@ Web server using Node JS
 
 # Important Information
 
-I have written the functions that does something with data in the 'getData.js' file
+I have written the functions that returns data in the 'getData.js' file
 
 Store your index.html in the folder 'assets/views/' from where your server is.
 
