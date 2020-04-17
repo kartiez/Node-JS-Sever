@@ -1,11 +1,10 @@
 var express = require("express");
 var server  = express();
-var getData = require(__dirname + '\\assets\\js\\getData.js');
 var bodyParser = require('body-parser');
 var path = require('path');
 
 server.use('/Appify', express.static('assets'))
-server.use('/Appify', express.static('assets/views'))
+server.use('/Appify', express.static('assets/views')) //PLACE YOUR HTML FILES HERE...
 
 server.get('/YOUR_URL',function(req,res){
 
